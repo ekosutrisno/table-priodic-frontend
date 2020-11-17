@@ -6,20 +6,22 @@
         <div
           v-masonry
           transition-duration="2s"
-          horizontal-order="true"
-          fit-width="true"
+          horizontal-order="false"
+          fit-width="false"
           item-selector=".item"
-          class="w-full mx-4"
+          origin-left="true"
+          origin-top="true"
+          class="w-full"
         >
           <div
             v-for="(item, index) in imgsArr"
             :key="index"
             v-masonry-tile
-            class="item p-2 overflow-hidden"
+            class="item p-1 overflow-hidden"
           >
             <div class="w-full h-full group transform hover:scale-105 transition-transform duration-200">
               <img
-                class=""
+                class="shadow-xs"
                 :src="item.src"
                 width="300"
               >
@@ -35,7 +37,7 @@
                     ><i class="fa fa-clock" />  SN-F{{ index }} </span>
                   </button>
                   <button
-                    class="bg-gray-900 text-white focus:outline-none opacity-75 shadow-inner py-1 px-2 rounded-full"
+                    class="bg-gray-900 text-white focus:outline-none opacity-75 shadow-inner py-2 px-3 rounded-full"
                   >
                     <span
                       class="z-50"
@@ -43,22 +45,23 @@
                   </button>
                 </div>
                 <div
-                  class="absolute px-5 mb-8 bottom-0 right-0 w-full flex items-center justify-end"
+                  class="absolute px-5 mb-8 bottom-0 right-0 w-full flex items-center justify-between"
                 >
                   <button
                     class="bg-gray-900 text-white focus:outline-none opacity-75 shadow-inner px-2 rounded-full"
                   >
                     <span
-                      class="z-50 text-xs"
+                      class="z-50"
+                      style="font-size:0.6rem"
                     ><i class="fa fa-tags" /> #O5N</span>
                   </button>
                   <button
                     class="bg-gray-900 text-white focus:outline-none opacity-75 shadow-inner py-2 px-3 rounded-full"
                   >
                     <span
-                      v-popover:foo
+                      v-popover:foo.top
                       class="z-50"
-                    ><i class="fa fa-copyright" /> Mnet Countdown</span>
+                    ><i class="fa fa-copyright" /> Mnet</span>
                   </button>
                 </div>
               </div>
