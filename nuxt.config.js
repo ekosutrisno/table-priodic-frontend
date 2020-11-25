@@ -29,7 +29,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: '~plugins/vue-js-modal', ssr: false },
+    { src: '~plugins/vue-js-modal', ssr: true },
     { src: '~/plugins/vue-masonry', ssr: false },
     { src: '~/plugins/vue-js-popover', ssr: false }
   ],

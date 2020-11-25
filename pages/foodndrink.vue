@@ -1,6 +1,6 @@
 /* eslint-disable vue/no-side-effects-in-computed-properties */
 <template>
-  <div class="min-h-screen max-h-screen">
+  <div class="min-h-screen">
     <div class="container mx-auto">
       <div class="flex flex-wrap items-center justify-center p-10">
         <FoodCard

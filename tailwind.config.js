@@ -11,7 +11,8 @@ module.exports = {
       },
       spacing: {
         72: '18rem',
-        50: '13rem'
+        50: '13rem',
+        80: '36rem'
       },
       fontFamily: {
         table: ['Nunito', 'sans-serif']

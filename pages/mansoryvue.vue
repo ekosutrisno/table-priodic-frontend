@@ -6,12 +6,9 @@
         <div
           v-masonry
           transition-duration="2s"
-          horizontal-order="false"
+          horizontal-order="true"
           fit-width="false"
           item-selector=".item"
-          origin-left="true"
-          origin-top="true"
-          class="w-full"
         >
           <div
             v-for="(item, index) in imgsArr"
@@ -19,13 +16,13 @@
             v-masonry-tile
             class="item p-1 overflow-hidden"
           >
-            <div class="w-full h-full group transform hover:scale-105 transition-transform duration-200">
-              <img
-                class="shadow-xs"
-                :src="item.src"
-                width="300"
+            <div
+              class="w-full h-full group transform hover:scale-105 transition-transform duration-200"
+            >
+              <img class="shadow-xs" :src="item.src" width="300">
+              <div
+                class="w-full h-full opacity-0 transition-opacity duration-300 ease-linear z-50 group-hover:opacity-100 flex flex-col justify-between"
               >
-              <div class="w-full h-full opacity-0 transition-opacity duration-300 ease-linear z-50 group-hover:opacity-100 flex flex-col justify-between">
                 <div
                   class="absolute px-5 mt-8 top-0 right-0 w-full flex items-center justify-between"
                 >
@@ -34,14 +31,13 @@
                   >
                     <span
                       class="z-50 text-xs"
-                    ><i class="fa fa-clock" />  SN-F{{ index }} </span>
+                    ><i class="fa fa-clock" /> SN-F{{ index }}
+                    </span>
                   </button>
                   <button
                     class="bg-gray-900 text-white focus:outline-none opacity-75 shadow-inner py-2 px-3 rounded-full"
                   >
-                    <span
-                      class="z-50"
-                    ><i class="fa fa-heart" /></span>
+                    <span class="z-50"><i class="fa fa-heart" /></span>
                   </button>
                 </div>
                 <div
@@ -52,7 +48,7 @@
                   >
                     <span
                       class="z-50"
-                      style="font-size:0.6rem"
+                      style="font-size: 0.6rem"
                     ><i class="fa fa-tags" /> #O5N</span>
                   </button>
                   <button
@@ -71,10 +67,17 @@
         <popover event="hover" :delay="500" :width="300" name="foo">
           <div class="w-full h-full bg-gray-100 p-2">
             <div class="w-full h-12 flex items-start justify-start">
-              <img class="w-16" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Secret_Number_Logo_Black.png">
+              <img
+                class="w-16"
+                src="https://upload.wikimedia.org/wikipedia/commons/8/87/Secret_Number_Logo_Black.png"
+              >
               <div class="flex flex-col items-start justify-star">
-                <span class="font-semibold text-sm text-gray-900">SECRET NUMBER GALERY</span>
-                <span class="text-xs -mt-1 text-gray-700">@wowfakta.secretnumber</span>
+                <span
+                  class="font-semibold text-sm text-gray-900"
+                >SECRET NUMBER GALERY</span>
+                <span
+                  class="text-xs -mt-1 text-gray-700"
+                >@wowfakta.secretnumber</span>
               </div>
             </div>
           </div>
